@@ -1,0 +1,69 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Hover effects for blips */
+.blip-element:hover .blip-shape {
+  stroke: #333;
+  stroke-width: 2;
+  filter: brightness(110%);
+}
+
+.blip-element:hover + .blip-text,
+.blip-element:hover ~ .blip-text {
+  opacity: 1 !important;
+  font-weight: bold;
+}
+
+/* Make text visible on hover */
+.blip-element:hover ~ .blip-text {
+  opacity: 1 !important;
+}
+
+/* Always show blip text on hover */
+.blip-text {
+  transition: opacity 0.2s ease;
+}
+
+g:hover .blip-text {
+  opacity: 1 !important;
+}
+
+/* Style for quadrant labels */
+.quadrant-label {
+  font-family: 'Arial', sans-serif;
+  pointer-events: none;
+}
